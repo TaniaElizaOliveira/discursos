@@ -2,156 +2,203 @@
 <html lang="pt-PT">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#f5f2ea">
-<title>Discurso do Fer — Meditar nas qualidades de Jeová</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f7f5ef">
+<title>Discurso do Fer — Manuscrito</title>
 <style>
 :root{
-  --bg:#f5f2ea;--paper:#fffdf9;--ink:#202722;--muted:#69716b;
-  --line:#ddd7ca;--deep:#20372b;--accent:#8b6b3e;--soft:#efe9dc;
-  --link:#315b48;--font:20px;--max:900px;
+  --bg:#f7f5ef;
+  --paper:#fffdfa;
+  --ink:#222622;
+  --muted:#6d736d;
+  --line:#ddd8ce;
+  --accent:#6d5840;
+  --link:#315b48;
+  --font:20px;
+  --max:820px;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{
-  margin:0;background:var(--bg);color:var(--ink);
+  margin:0;
+  background:var(--bg);
+  color:var(--ink);
   font-family:Georgia,"Times New Roman",serif;
-  font-size:var(--font);line-height:1.58;
+  font-size:var(--font);
+  line-height:1.62;
 }
-.progress{position:fixed;inset:0 0 auto;height:4px;background:#ddd7ca;z-index:90}
+.progress{
+  position:fixed;top:0;left:0;right:0;height:3px;
+  background:#e2ded5;z-index:50
+}
 .progress span{display:block;height:100%;width:0;background:var(--accent)}
 .toolbar{
-  position:sticky;top:0;z-index:80;background:rgba(245,242,234,.95);
-  backdrop-filter:blur(14px);border-bottom:1px solid var(--line)
+  position:sticky;top:0;z-index:40;
+  background:rgba(247,245,239,.96);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--line)
 }
 .toolbar-inner{
-  width:min(calc(100% - 28px),var(--max));margin:auto;min-height:60px;
+  width:min(calc(100% - 24px),var(--max));
+  margin:auto;min-height:56px;
   display:flex;align-items:center;justify-content:space-between;gap:12px
 }
 .toolbar-title{
-  font:800 13px/1.2 system-ui,-apple-system,"Segoe UI",sans-serif;
-  white-space:nowrap;overflow:hidden;text-overflow:ellipsis
+  font:700 12px/1.2 system-ui,-apple-system,"Segoe UI",sans-serif;
+  color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis
 }
-.actions{display:flex;gap:7px;flex-shrink:0}
+.actions{display:flex;gap:6px}
 button{
-  height:40px;min-width:40px;padding:0 12px;border:1px solid var(--line);
-  border-radius:999px;background:var(--paper);color:var(--ink);cursor:pointer;
-  font:750 13px/1 system-ui,-apple-system,"Segoe UI",sans-serif
+  height:38px;padding:0 11px;
+  border:1px solid var(--line);border-radius:8px;
+  background:var(--paper);color:var(--ink);cursor:pointer;
+  font:700 12px/1 system-ui,-apple-system,"Segoe UI",sans-serif
 }
-.hero{
-  width:min(calc(100% - 28px),var(--max));margin:auto;
-  padding:54px 0 30px;border-bottom:1px solid var(--line)
+header{
+  width:min(calc(100% - 24px),var(--max));
+  margin:auto;
+  padding:48px 0 28px;
+  border-bottom:1px solid var(--line);
+  text-align:center
 }
-.kicker{
-  font:800 12px/1.2 system-ui,-apple-system,"Segoe UI",sans-serif;
-  letter-spacing:.1em;text-transform:uppercase;color:var(--accent)
+header .meta{
+  font:700 12px/1.2 system-ui,-apple-system,"Segoe UI",sans-serif;
+  letter-spacing:.08em;text-transform:uppercase;color:var(--muted)
 }
 h1{
-  margin:12px 0 14px;font-size:clamp(2.25rem,5.8vw,4.4rem);
-  line-height:.98;letter-spacing:-.045em;color:var(--deep);text-wrap:balance
+  margin:13px auto 10px;
+  max-width:760px;
+  font-size:clamp(2rem,5vw,3.5rem);
+  line-height:1.05;
+  letter-spacing:-.035em;
+  color:#242824
 }
-.lead{margin:0;max-width:760px;color:#4b554e;font-size:1.04em}
-.nav{
-  width:min(calc(100% - 28px),var(--max));margin:20px auto 0;
-  display:flex;gap:7px;overflow-x:auto;padding-bottom:3px
+header p{margin:0;color:#515851}
+nav{
+  width:min(calc(100% - 24px),var(--max));
+  margin:16px auto 0;
+  display:flex;gap:6px;overflow:auto;padding-bottom:2px
 }
-.nav a{
-  flex:0 0 auto;text-decoration:none;padding:10px 12px;border-radius:999px;
-  background:var(--deep);color:white;
-  font:750 12px/1 system-ui,-apple-system,"Segoe UI",sans-serif
+nav a{
+  flex:0 0 auto;text-decoration:none;
+  padding:8px 10px;border:1px solid var(--line);border-radius:7px;
+  background:var(--paper);color:#444b45;
+  font:700 11px/1 system-ui,-apple-system,"Segoe UI",sans-serif
 }
-main{width:min(calc(100% - 28px),var(--max));margin:auto;padding:6px 0 70px}
-section{padding:38px 0;border-bottom:1px solid var(--line);scroll-margin-top:75px}
+main{
+  width:min(calc(100% - 24px),var(--max));
+  margin:auto;
+  padding:12px 0 64px
+}
+section{
+  padding:30px 0;
+  border-bottom:1px solid var(--line);
+  scroll-margin-top:66px
+}
 section:last-child{border-bottom:0}
 h2{
-  margin:0 0 20px;color:var(--deep);
-  font-size:clamp(1.55rem,3.7vw,2.55rem);line-height:1.08;
-  letter-spacing:-.03em;text-wrap:balance
+  margin:0 0 16px;
+  font-size:1.42em;
+  line-height:1.18;
+  color:#2c312c
 }
-p{margin:0 0 .72em}
-p:last-child{margin-bottom:0}
-.question{
-  margin:.9em 0;font-weight:700;color:var(--deep);font-size:1.05em
+p{
+  margin:0 0 .78em;
+  text-align:left;
 }
-.key{font-weight:700;color:var(--deep)}
+strong{font-weight:700}
+.question{font-weight:700}
+.point{
+  margin:16px 0 18px;
+  padding:12px 14px;
+  border-left:3px solid #b7aa95;
+  background:#f1ede5;
+  border-radius:0 8px 8px 0
+}
+.point p{margin:0 0 .35em}
+.point p:last-child{margin-bottom:0}
 .transition{
-  margin:1.15em 0;padding-left:16px;border-left:3px solid #c9b792;
-  color:#49534c;font-style:italic
+  margin:1.1em 0;
+  color:#555c56;
+  font-style:italic
 }
-.recap{
-  margin:20px 0;padding:18px 20px;background:var(--deep);color:white;border-radius:15px
+.cue{
+  display:block;
+  margin:.9em 0;
+  color:#8a8175;
+  font:700 11px/1 system-ui,-apple-system,"Segoe UI",sans-serif;
+  letter-spacing:.06em;text-transform:uppercase
 }
-.recap p{margin:0 0 .4em}
-.recap p:last-child{margin-bottom:0}
-.recap strong{color:#efd39d}
-
 .scripture{
-  margin:12px 0 18px;background:var(--paper);border:1px solid var(--line);
-  border-radius:14px;overflow:hidden
+  margin:12px 0 17px;
+  background:var(--paper);
+  border:1px solid var(--line);
+  border-radius:9px;
+  overflow:hidden
 }
 .scripture summary{
-  cursor:pointer;list-style:none;padding:13px 15px;
-  display:flex;align-items:center;justify-content:space-between;gap:12px;
-  color:var(--link);font:800 14px/1.2 system-ui,-apple-system,"Segoe UI",sans-serif
+  cursor:pointer;list-style:none;
+  padding:11px 13px;
+  display:flex;justify-content:space-between;gap:10px;
+  color:var(--link);
+  font:700 13px/1.25 system-ui,-apple-system,"Segoe UI",sans-serif
 }
 .scripture summary::-webkit-details-marker{display:none}
-.scripture summary::after{content:"＋";font-size:18px;font-weight:500}
-.scripture[open] summary::after{content:"−"}
-.scripture-body{padding:0 15px 14px;border-top:1px solid var(--line)}
-.scripture blockquote{
-  margin:13px 0 9px;padding:0;border:0;background:none;
-  font-style:italic;line-height:1.55
+.scripture summary::after{content:"Abrir";color:#7d857f;font-size:11px}
+.scripture[open] summary::after{content:"Fechar"}
+.scripture-body{
+  padding:0 13px 12px;
+  border-top:1px solid var(--line)
+}
+blockquote{
+  margin:12px 0 7px;
+  padding-left:14px;
+  border-left:2px solid #c8bba7;
+  font-style:italic
 }
 .official{
-  display:inline-flex;margin-top:3px;color:var(--link);text-decoration:none;
-  font:750 12px/1.2 system-ui,-apple-system,"Segoe UI",sans-serif
+  color:var(--link);text-decoration:none;
+  font:700 11px/1.3 system-ui,-apple-system,"Segoe UI",sans-serif
 }
-.official:hover{text-decoration:underline}
-
-.refbox{
-  margin-top:18px;padding:14px 16px;background:#eee8dc;border-radius:14px
+.refs{
+  margin-top:13px;
+  color:var(--muted);
+  font:12px/1.45 system-ui,-apple-system,"Segoe UI",sans-serif
 }
-.refbox-title{
-  margin-bottom:8px;color:var(--muted);
-  font:800 11px/1.2 system-ui,-apple-system,"Segoe UI",sans-serif;
-  text-transform:uppercase;letter-spacing:.08em
-}
-.refbox a{
-  color:var(--link);text-decoration:none;font:750 13px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif
-}
-.refbox a:hover{text-decoration:underline}
-.refbox a+a::before{content:" · ";color:#9f9585}
-
+.refs a{color:var(--link);text-decoration:none;font-weight:700}
 .family{
-  margin-top:34px;padding:22px;background:#eee7d9;border-radius:18px;border:0
+  background:#f0ece3;
+  border-radius:10px;
+  padding:18px;
+  margin-top:28px
 }
 footer{
-  width:min(calc(100% - 28px),var(--max));margin:0 auto 60px;padding-top:22px;
-  border-top:1px solid var(--line);color:var(--muted);
-  font:13px/1.55 system-ui,-apple-system,"Segoe UI",sans-serif
+  width:min(calc(100% - 24px),var(--max));
+  margin:0 auto 52px;
+  padding-top:18px;
+  border-top:1px solid var(--line);
+  color:var(--muted);
+  font:12px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif
 }
 @media(max-width:700px){
   :root{--font:18px}
-  .toolbar-title{max-width:46vw}
-  .hero{padding-top:38px}
-  section{padding:31px 0}
+  header{padding-top:36px}
+  .toolbar-title{max-width:45vw}
 }
 @media(max-width:420px){
   .toolbar-title{display:none}
   .toolbar-inner{justify-content:flex-end}
-  .hero{padding-top:32px}
 }
 @media print{
   :root{--font:14px}
-  body{background:white}
-  .progress,.toolbar,.nav,.refbox{display:none!important}
-  .hero,main,footer{width:100%;max-width:none}
-  .hero{padding:0 0 18px}
-  h1{font-size:32px}
-  section{padding:22px 0}
+  body{background:#fff}
+  .progress,.toolbar,nav,.refs{display:none!important}
+  header,main,footer{width:100%;max-width:none}
+  header{padding:0 0 16px}
+  h1{font-size:28px}
+  section{padding:20px 0}
   .scripture-body{display:block!important}
-  details.scripture{break-inside:avoid}
-  .recap,.family{break-inside:avoid}
+  .scripture{break-inside:avoid}
 }
 </style>
 </head>
@@ -159,24 +206,24 @@ footer{
 
 <div class="progress"><span id="progress"></span></div>
 
-<header class="toolbar">
+<div class="toolbar">
   <div class="toolbar-inner">
-    <div class="toolbar-title">Discurso do Fer · Meditar nas qualidades de Jeová</div>
+    <div class="toolbar-title">Discurso do Fer — manuscrito</div>
     <div class="actions">
-      <button id="minus" aria-label="Diminuir letra">A−</button>
-      <button id="plus" aria-label="Aumentar letra">A+</button>
+      <button id="minus">A−</button>
+      <button id="plus">A+</button>
       <button id="print">Imprimir</button>
     </div>
   </div>
-</header>
-
-<div class="hero">
-  <div class="kicker">Discurso · 10 minutos</div>
-  <h1>Meditar nas qualidades de Jeová fortalece a nossa fé</h1>
-  <p class="lead">O que é que as qualidades de Jeová nos ensinam sobre confiar nele?</p>
 </div>
 
-<nav class="nav" aria-label="Partes do discurso">
+<header>
+  <div class="meta">Discurso · 10 minutos</div>
+  <h1>Meditar nas qualidades de Jeová fortalece a nossa fé</h1>
+  <p>O que as qualidades de Jeová nos ensinam sobre confiar nele?</p>
+</header>
+
+<nav>
   <a href="#intro">Introdução</a>
   <a href="#poder">1. Poder</a>
   <a href="#amor">2. Amor leal</a>
@@ -189,177 +236,230 @@ footer{
 <section id="intro">
 <h2>Introdução</h2>
 
-<p>O que é que as qualidades de Jeová nos ensinam sobre confiar nele? Todos nós enfrentamos situações que podem testar a nossa fé. Talvez, numa altura difícil, já tenhamos pensado: <span class="key">“Será que Jeová consegue ajudar-me?”</span> Ou talvez saibamos que ele pode ajudar-nos, mas surja outra dúvida: <span class="key">“Será que ele realmente quer ajudar-me?”</span></p>
+<p>O que as qualidades de Jeová nos ensinam sobre confiar nele? Todos nós enfrentamos situações que podem testar a nossa fé. Talvez, numa altura difícil, já tenhamos pensado: <span class="question">“Será que Jeová consegue ajudar-me?”</span> Ou: <span class="question">“Eu sei que ele pode ajudar-me... mas será que ele realmente quer ajudar-me?”</span></p>
 
-<p>E, quando somos vítimas de uma injustiça, pode aparecer ainda outra pergunta: <span class="key">“Será que Jeová está a ver o que está a acontecer?”</span> Estas não são perguntas estranhas. Jeremias também viveu situações que podiam ter enfraquecido a sua fé, mas continuou a confiar em Jeová.</p>
+<p>E quando somos vítimas de uma injustiça, talvez surja outra pergunta: <span class="question">“Será que Jeová está a ver o que está a acontecer?”</span> Estas não são perguntas estranhas. Jeremias também passou por situações que poderiam ter enfraquecido a sua fé. Mas ele continuou a confiar em Jeová.</p>
 
-<p>O que o ajudou? Jeremias conhecia as qualidades de Jeová e meditava nelas. Nós podemos fazer o mesmo. Hoje vamos considerar três dessas qualidades e ver como cada uma responde a uma pergunta importante: <span class="key">Jeová pode ajudar-nos? Quer ajudar-nos? E, quando existe uma injustiça, ele vê e vai fazer o que é certo?</span></p>
+<p>O que ajudou Jeremias a manter essa confiança? Ele conhecia as qualidades de Jeová e meditava nelas. E nós podemos fazer o mesmo.</p>
+
+<p>Hoje vamos considerar três qualidades de Jeová. E, para ser fácil acompanhar o raciocínio, podemos resumir o discurso em três ideias muito simples:</p>
+
+<div class="point">
+<p><strong>Poder:</strong> Jeová <strong>pode ajudar-nos</strong>.</p>
+<p><strong>Amor leal:</strong> Jeová <strong>quer ajudar-nos</strong>.</p>
+<p><strong>Justiça:</strong> Jeová <strong>vê e vai corrigir</strong>.</p>
+</div>
+
+<p>Também é importante lembrar que o poder de Jeová não é apenas algo que vemos na criação. Nós beneficiamos desse poder pessoalmente. A nossa vida depende das coisas que Deus criou, como o Sol e os maravilhosos recursos que encontramos na Terra. Mas Jeová também usa o seu poder para ajudar as pessoas individualmente.</p>
+
+<p>A Bíblia mostra que <span class="question">“ele dá poder ao cansado”</span> e que <span class="question">“os que esperam em Jeová recuperarão as forças”</span>. Além disso, Deus pode dar-nos <span class="question">“poder além do normal”</span> para nos ajudar a lidar com as dificuldades da vida. Portanto, quando pensamos no poder de Jeová, não estamos apenas a pensar numa força enorme. Estamos a pensar num Deus que usa amorosamente esse poder para ajudar os seus servos.</p>
+
+<details class="scripture">
+<summary>Isaías 40:29, 31</summary>
+<div class="scripture-body">
+<blockquote>“Ele dá poder ao cansado e enche de força o que está sem energia. [...] Mas os que esperam em Jeová recuperarão as forças.”</blockquote>
+<a class="official" href="https://wol.jw.org/pt-PT/wol/b/r296/lp-tpo/nwt/23/40" target="_blank" rel="noopener">Abrir na WOL ↗</a>
+</div>
+</details>
+
+<details class="scripture">
+<summary>2 Coríntios 4:7</summary>
+<div class="scripture-body">
+<blockquote>“No entanto, temos este tesouro em vasos de barro, para que o poder além do normal seja de Deus, e não de nós.”</blockquote>
+<a class="official" href="https://wol.jw.org/pt-PT/wol/b/r296/lp-tpo/nwt/47/4" target="_blank" rel="noopener">Abrir na WOL ↗</a>
+</div>
+</details>
 </section>
 
 <section id="poder">
 <h2>1. O poder de Jeová prova que ele pode ajudar-nos</h2>
 
-<p>Vamos começar com <span class="key">Jeremias 32:17</span>. Jeremias não estava apenas a dizer que Jeová é poderoso. Ele estava a pensar nas provas desse poder — os céus e a Terra — e isso deu-lhe uma razão concreta para confiar.</p>
+<p>Vamos começar por ler Jeremias 32:17.</p>
 
 <details class="scripture">
-  <summary>Jeremias 32:17 — tocar para abrir o texto</summary>
-  <div class="scripture-body">
-    <blockquote>“Ai, Soberano Senhor Jeová! Tu fizeste os céus e a terra com o teu grande poder e o teu braço estendido. Nada é impossível para ti.”</blockquote>
-    <a class="official" href="https://wol.jw.org/pt-PT/wol/bc/r296/lp-tpo/202026252/1/0" target="_blank" rel="noopener">Abrir na WOL ↗</a>
-  </div>
+<summary>Jeremias 32:17</summary>
+<div class="scripture-body">
+<blockquote>“Ai, Soberano Senhor Jeová! Tu fizeste os céus e a terra com o teu grande poder e o teu braço estendido. Nada é impossível para ti.”</blockquote>
+<a class="official" href="https://wol.jw.org/pt-PT/wol/bc/r296/lp-tpo/202026252/1/0" target="_blank" rel="noopener">Abrir na WOL ↗</a>
+</div>
 </details>
 
-<p>Reparem na última frase: <span class="key">“Nada é impossível para ti.”</span> A publicação indicada para este ponto usa o Sol como exemplo. Num dia de verão, quando sentimos o seu calor na pele, estamos a sentir apenas uma pequena amostra da energia que ele produz. No núcleo do Sol, a temperatura chega a cerca de 15 milhões de graus Celsius e, a cada segundo, ele liberta uma quantidade extraordinária de energia.</p>
+<p>Que palavras fortes! Jeremias reconheceu que Jeová fez os céus e a Terra com o seu grande poder. E terminou com uma declaração que vale a pena guardar no coração: <span class="question">“Nada é impossível para ti.”</span></p>
 
-<p>Agora pensemos: <span class="key">quem criou o Sol?</span> Jeová. E o Sol é apenas uma das inúmeras estrelas que existem no Universo. Por isso, quando Jeremias disse que Jeová fez os céus e a Terra com o seu grande poder, aquilo não era simplesmente uma frase bonita. Era uma base para dizer com convicção: “Nada é impossível para ti.”</p>
+<p>Mas será que conseguimos ter uma pequena ideia do tamanho desse poder? Pensemos no Sol. Quando sentimos o calor do Sol na nossa pele, estamos a sentir apenas uma pequena parte da energia que ele produz. No interior do Sol, a temperatura chega a cerca de 15 milhões de graus Celsius.</p>
 
-<p>Como é que isso nos ajuda? Às vezes enfrentamos um problema e pensamos: <span class="key">“Eu não consigo resolver isto.”</span> E talvez seja verdade. Mas a pergunta mais importante não é “Eu consigo?”; é <span class="key">“Jeová consegue?”</span></p>
+<p>E há algo ainda mais impressionante: a cada segundo, o Sol liberta uma quantidade de energia simplesmente inimaginável. Para termos uma ideia, num único segundo, ele liberta energia equivalente à explosão de centenas de milhões de bombas nucleares. E não acontece apenas uma vez. Acontece a cada segundo — segundo após segundo, dia após dia, ano após ano.</p>
 
-<p>Aquele que criou o Sol não fica limitado por aquilo que para nós parece impossível. Isso não quer dizer que Jeová vá eliminar imediatamente cada problema ou resolvê-lo exatamente como imaginamos. Mas ele pode dar-nos a força, a sabedoria e a resistência necessárias para continuar. A publicação lembra que ele “dá poder ao cansado” e pode dar “poder além do normal” aos seus servos.</p>
+<p>E nós, seres humanos, diante de uma força dessas, somos extremamente pequenos. Não conseguimos produzir nem uma fração dessa energia. Não conseguimos controlar o Sol. Não conseguimos sequer aproximar-nos dele.</p>
 
-<p class="question">Por isso, quando um problema parecer enorme, podemos perguntar: “Estou a olhar apenas para o tamanho do problema, ou também para o poder de Jeová?”</p>
+<p>Agora pensemos: <span class="question">Quem criou o Sol?</span> Jeová. E o Sol é apenas uma estrela entre centenas de milhares de milhões de estrelas que existem na nossa galáxia.</p>
 
-<div class="recap"><p><strong>Primeira certeza: Jeová pode ajudar-nos.</strong></p></div>
+<p>Então, quando Jeremias disse: <span class="question">“Tu fizeste os céus e a terra com o teu grande poder”</span>, ele estava a reconhecer uma realidade extraordinária: o poder de Jeová está muito além daquilo que conseguimos compreender.</p>
 
-<p class="transition">Mas uma pessoa pode ter capacidade para nos ajudar e, mesmo assim, não querer fazê-lo. Então, será que Jeová quer ajudar-nos?</p>
+<span class="cue">Aplicação</span>
 
-<div class="refbox">
-  <div class="refbox-title">Referência do programa</div>
-  <a href="https://wol.jw.org/pt-PT/wol/pc/r296/lp-tpo/202026252/1/0" target="_blank" rel="noopener">wp19.1 pp. 6-7 ↗</a>
-</div>
+<p>Agora vamos trazer isto para a nossa realidade. Talvez estejamos a enfrentar um problema e pensemos: <span class="question">“Eu não consigo resolver isto.”</span> E talvez seja verdade. Talvez nós realmente não consigamos.</p>
+
+<p>Mas há uma pergunta muito mais importante: <span class="question">“Será que Jeová consegue?”</span> Aquele que criou o Sol, com todo esse poder extraordinário, certamente não fica limitado por aquilo que para nós parece impossível.</p>
+
+<p>Por isso, quando um problema parecer maior do que nós, o que devemos fazer? Em vez de nos concentrarmos apenas no tamanho do problema, vamos concentrar-nos no tamanho do poder de Jeová. Porque aquilo que para nós pode parecer impossível, para Jeová não é demasiado difícil.</p>
+
+<p>Então, quando enfrentarmos um problema que parece impossível, podemos perguntar: <span class="question">“Em que estou a concentrar a minha atenção — no tamanho do problema ou no poder de Jeová?”</span></p>
+
+<div class="point"><p>Meditar no poder de Jeová fortalece a nossa fé porque nos lembra de uma verdade simples: <strong>Jeová pode ajudar-nos.</strong></p></div>
+
+<p class="transition">Mesmo que saibamos que alguém pode ajudar-nos, será que isso significa que essa pessoa quer ajudar-nos? É aí que entra a segunda qualidade.</p>
+
+<div class="refs">Referência: <a href="https://wol.jw.org/pt-PT/wol/pc/r296/lp-tpo/202026252/1/0" target="_blank" rel="noopener">wp19.1, pp. 6-7 ↗</a></div>
 </section>
 
 <section id="amor">
 <h2>2. O amor leal de Jeová assegura-nos de que ele quer ajudar-nos</h2>
 
-<p>Agora vamos a <span class="key">Jeremias 32:18</span>. Aqui Jeremias não fala apenas do poder de Jeová; destaca também o seu <span class="key">amor leal</span>. E isso responde à segunda pergunta.</p>
+<p>Vamos ler agora Jeremias 32:18.</p>
 
 <details class="scripture">
-  <summary>Jeremias 32:18 — tocar para abrir o texto</summary>
-  <div class="scripture-body">
-    <blockquote>“Aquele que demonstra amor leal a milhares, mas traz a retribuição dos erros dos pais sobre os filhos. Tu és o verdadeiro Deus, o Grande e Poderoso, cujo nome é Jeová dos exércitos.”</blockquote>
-    <a class="official" href="https://wol.jw.org/pt-PT/wol/bc/r296/lp-tpo/202026252/2/0" target="_blank" rel="noopener">Abrir na WOL ↗</a>
-  </div>
+<summary>Jeremias 32:18</summary>
+<div class="scripture-body">
+<blockquote>“Aquele que demonstra amor leal a milhares... Tu és o verdadeiro Deus, o Grande e Poderoso, cujo nome é Jeová dos exércitos.”</blockquote>
+<a class="official" href="https://wol.jw.org/pt-PT/wol/bc/r296/lp-tpo/202026252/2/0" target="_blank" rel="noopener">Abrir na WOL ↗</a>
+</div>
 </details>
 
-<p>Imagine alguém com todos os meios para nos ajudar, mas que é frio, distante e não se importa connosco. Saber que essa pessoa <em>pode</em> ajudar seria suficiente para nos dar segurança? Provavelmente não. É por isso que não basta saber que Jeová tem poder. Precisamos de saber que ele se importa connosco.</p>
+<p>Neste versículo, Jeremias fala sobre o amor leal de Jeová. E isso é muito importante. Imagine que uma pessoa tem capacidade para nos ajudar, mas não se importa connosco. Será que ficaríamos tranquilos, pensando: <span class="question">“Ela tem capacidade para me ajudar, portanto vai ajudar-me”?</span> Provavelmente não.</p>
 
-<p>A referência indicada para este ponto mostra precisamente isso. Motivado pelo seu amor leal, Jeová acolhe os seus servos nos seus “braços protetores”, mantém-nos perto dele e <span class="key">quer que sejamos bem-sucedidos</span>. Seja qual for o problema, ele pode dar-nos a força de que precisamos para continuarmos leais.</p>
+<p>Por isso, não basta saber que Jeová pode ajudar-nos. Precisamos também de ter a certeza de que ele quer ajudar-nos. E o amor leal de Jeová dá-nos essa certeza.</p>
 
-<p>O Salmo 46 reforça essa ideia. Em vez de apenas dizer que Deus tem força, chama-lhe <span class="key">“uma ajuda encontrada prontamente em tempos de aflição”</span>.</p>
+<p>Jeová não é um Deus distante ou indiferente. Ele preocupa-se connosco e quer que continuemos perto dele. Então, quando estamos a passar por um problema, talvez pensemos: <span class="question">“Jeová, onde estás? Será que te importas comigo?”</span></p>
+
+<p>Nesses momentos, precisamos de fazer o que Jeremias fazia: meditar nas qualidades de Jeová. O Salmo 46:1, 2 e 7 mostra que Jeová é para nós um refúgio e uma fonte de força. Que segurança isso nos dá! Podemos ter a certeza de que, seja qual for o problema, Jeová nos dará a força necessária para continuar fiéis.</p>
 
 <details class="scripture">
-  <summary>Salmo 46:1, 2, 7 — tocar para abrir o texto</summary>
-  <div class="scripture-body">
-    <blockquote>“Deus é o nosso refúgio e a nossa força, uma ajuda encontrada prontamente em tempos de aflição. É por isso que não teremos medo, ainda que a terra se transforme, ainda que os montes caiam nas profundezas do mar. [...] Jeová dos exércitos está connosco; o Deus de Jacó é o nosso refúgio seguro.”</blockquote>
-    <a class="official" href="https://wol.jw.org/pt-PT/wol/b/r296/lp-tpo/nwt/19/46" target="_blank" rel="noopener">Abrir na WOL ↗</a>
-  </div>
+<summary>Salmo 46:1, 2, 7</summary>
+<div class="scripture-body">
+<blockquote>“Deus é o nosso refúgio e a nossa força, uma ajuda encontrada prontamente em tempos de aflição. É por isso que não teremos medo... Jeová dos exércitos está connosco; o Deus de Jacó é o nosso refúgio seguro.”</blockquote>
+<a class="official" href="https://wol.jw.org/pt-PT/wol/b/r296/lp-tpo/nwt/19/46" target="_blank" rel="noopener">Abrir na WOL ↗</a>
+</div>
 </details>
 
-<p>Talvez, numa fase difícil, alguém pense: <span class="key">“Jeová, será que te importas mesmo comigo?”</span> Nesse momento, em vez de medirmos o amor de Jeová pelo problema que estamos a viver, fazemos melhor em lembrar-nos de quem ele é. O seu amor leal mostra que ele não é um Deus distante.</p>
-
-<div class="recap">
-  <p>O poder de Jeová mostra que <strong>ele pode ajudar-nos.</strong></p>
-  <p>O amor leal mostra que <strong>ele quer ajudar-nos.</strong></p>
+<div class="point">
+<p>Veja como os dois primeiros pontos se complementam:</p>
+<p>O poder de Jeová mostra que <strong>ele pode ajudar-nos.</strong></p>
+<p>O amor leal de Jeová mostra que <strong>ele quer ajudar-nos.</strong></p>
 </div>
 
-<p class="transition">Mas há uma situação que pode ser especialmente difícil para a fé: sofrer uma injustiça. Nessa altura, talvez perguntemos: “Se Jeová se importa comigo, porque é que permite isto?”</p>
+<p>Quando juntamos estas duas verdades, temos uma razão muito forte para confiar nele.</p>
 
-<div class="refbox">
-  <div class="refbox-title">Referência do programa</div>
-  <a href="https://wol.jw.org/pt-PT/wol/pc/r296/lp-tpo/202026252/2/0" target="_blank" rel="noopener">w21.11 p. 7 §18 ↗</a>
-</div>
+<p class="transition">Mas há ainda uma situação que pode ser especialmente difícil para a nossa fé: quando sofremos uma injustiça. Nessas alturas, talvez perguntemos: “Se Jeová se importa comigo, porque é que permite que isto aconteça?” Jeremias também teve de lidar com esse tipo de situação.</p>
+
+<div class="refs">Referência: <a href="https://wol.jw.org/pt-PT/wol/pc/r296/lp-tpo/202026252/2/0" target="_blank" rel="noopener">w21.11, p. 7 §18 ↗</a></div>
 </section>
 
 <section id="justica">
 <h2>3. Jeová ama a justiça</h2>
 
-<p>Vamos ler <span class="key">Jeremias 32:19</span>. Há uma expressão neste versículo que responde diretamente à pergunta sobre a injustiça: <span class="key">“os teus olhos observam todos os caminhos dos homens”</span>. Em outras palavras, Jeová vê.</p>
+<p>Vamos ler Jeremias 32:19.</p>
 
 <details class="scripture">
-  <summary>Jeremias 32:19 — tocar para abrir o texto</summary>
-  <div class="scripture-body">
-    <blockquote>“Os teus propósitos são grandiosos, e os teus atos são poderosos; os teus olhos observam todos os caminhos dos homens, para retribuir a cada um conforme os seus caminhos e conforme as suas ações.”</blockquote>
-    <a class="official" href="https://wol.jw.org/pt-PT/wol/bc/r296/lp-tpo/202026252/3/0" target="_blank" rel="noopener">Abrir na WOL ↗</a>
-  </div>
-</details>
-
-<p>A referência indicada para este ponto leva-nos a uma oração de Jeremias. Em Jeremias 12:1, ele estava desanimado porque parecia que pessoas más tinham uma vida boa e feliz. Além disso, ele próprio era maltratado por outros israelitas.</p>
-
-<details class="scripture">
-  <summary>Jeremias 12:1 — tocar para abrir o texto</summary>
-  <div class="scripture-body">
-    <blockquote>“Tu és justo, ó Jeová, quando apresento a ti a minha queixa, quando falo contigo sobre questões de justiça. Mas por que os maus são bem-sucedidos no seu caminho? E por que os traiçoeiros vivem tranquilos?”</blockquote>
-    <a class="official" href="https://wol.jw.org/pt-PT/wol/b/r296/lp-tpo/nwt/24/12" target="_blank" rel="noopener">Abrir na WOL ↗</a>
-  </div>
-</details>
-
-<p>Será que nos conseguimos identificar com ele? Talvez alguém nos tenha tratado de forma injusta. Talvez vejamos uma pessoa desonesta a sair-se bem e pensemos: <span class="key">“Como é que isto é possível?”</span> Jeremias não fingiu que aquilo não o incomodava. Ele falou com Jeová e disse-lhe o que sentia.</p>
-
-<p>Mas existe um detalhe muito importante: <span class="key">Jeremias nunca acusou Jeová de ser injusto.</span> Ele não entendia tudo o que estava a acontecer, mas continuava convencido de que Jeová era justo. Mais tarde, viu Jeová corrigir os israelitas rebeldes, e isso deve ter fortalecido ainda mais a sua confiança.</p>
-
-<p>A lição para nós é clara. Quando sofremos uma injustiça, podemos contar a Jeová tudo o que nos magoa. Podemos dizer-lhe exatamente como nos sentimos. Mas não precisamos de interpretar a demora como indiferença. <span class="key">Jeová vê aquilo que nós vemos — e vê muito mais do que nós.</span> No tempo certo, ele vai corrigir todas as injustiças.</p>
-
-<div class="recap"><p><strong>Terceira certeza: Jeová vê, ama a justiça e vai fazer o que é certo.</strong></p></div>
-
-<div class="refbox">
-  <div class="refbox-title">Referência do programa</div>
-  <a href="https://wol.jw.org/pt-PT/wol/pc/r296/lp-tpo/202026252/3/0" target="_blank" rel="noopener">w25.10 p. 21 §15 ↗</a>
+<summary>Jeremias 32:19</summary>
+<div class="scripture-body">
+<blockquote>“Os teus propósitos são grandiosos, e os teus atos são poderosos; os teus olhos observam todos os caminhos dos homens, para retribuir a cada um conforme os seus caminhos e conforme as suas ações.”</blockquote>
+<a class="official" href="https://wol.jw.org/pt-PT/wol/bc/r296/lp-tpo/202026252/3/0" target="_blank" rel="noopener">Abrir na WOL ↗</a>
 </div>
+</details>
+
+<p>O que é que este texto nos mostra? Que Jeová observa o que acontece e recompensa cada pessoa de acordo com os seus atos.</p>
+
+<p>Mas Jeremias nem sempre compreendia por que razão parecia que as pessoas más estavam a ter uma vida boa. Além disso, ele próprio era maltratado. Talvez consigamos compreender os seus sentimentos.</p>
+
+<p>Já alguma vez vimos uma pessoa desonesta ser bem-sucedida? Ou alguém nos tratou injustamente? Nessas situações, podemos pensar: <span class="question">“Será que Jeová está a ver isto?”</span></p>
+
+<p>Jeremias falou abertamente com Jeová sobre aquilo que o incomodava. Mas há algo muito importante: <strong>ele nunca acusou Jeová de ser injusto.</strong> Continuou a confiar na justiça de Jeová.</p>
+
+<details class="scripture">
+<summary>Jeremias 12:1</summary>
+<div class="scripture-body">
+<blockquote>“Tu és justo, ó Jeová, quando apresento a ti a minha queixa, quando falo contigo sobre questões de justiça. Mas por que os maus são bem-sucedidos no seu caminho? E por que os traiçoeiros vivem tranquilos?”</blockquote>
+<a class="official" href="https://wol.jw.org/pt-PT/wol/b/r296/lp-tpo/nwt/24/12" target="_blank" rel="noopener">Abrir na WOL ↗</a>
+</div>
+</details>
+
+<p>Mais tarde, Jeremias viu Jeová agir contra os israelitas rebeldes. Isso deve ter fortalecido ainda mais a sua confiança.</p>
+
+<span class="cue">Aplicação</span>
+
+<p>O que aprendemos? Quando sofremos uma injustiça, podemos falar com Jeová sobre os nossos sentimentos. Podemos dizer-lhe exatamente aquilo que nos incomoda. Mas, ao mesmo tempo, precisamos de continuar convencidos de uma coisa: <strong>Jeová vê tudo e vai agir no tempo certo.</strong></p>
+
+<p>Talvez nós não vejamos imediatamente a justiça a ser feita. Mas Jeová vê. Ele ama a justiça e nunca vai permitir que a injustiça continue para sempre.</p>
+
+<p>Por isso, quando enfrentarmos uma injustiça, podemos fazer como Jeremias: contar a Jeová o que sentimos e continuar a confiar na sua justiça.</p>
+
+<div class="point"><p><strong>Jeová vê e vai corrigir.</strong></p></div>
+
+<div class="refs">Referência: <a href="https://wol.jw.org/pt-PT/wol/pc/r296/lp-tpo/202026252/3/0" target="_blank" rel="noopener">w25.10, p. 21 §15 ↗</a></div>
 </section>
 
 <section id="conclusao">
 <h2>Conclusão</h2>
 
-<p>Então, o que é que as qualidades de Jeová nos ensinam sobre confiar nele? Vimos três respostas muito simples. Quando pensamos <span class="key">“Será que Jeová consegue ajudar-me?”</span>, o seu poder responde: <strong>pode</strong>. Quando pensamos <span class="key">“Mas será que ele realmente quer ajudar-me?”</span>, o seu amor leal responde: <strong>quer</strong>. E quando pensamos <span class="key">“Será que ele está a ver esta injustiça?”</span>, a sua justiça responde: <strong>vê — e vai fazer o que é certo</strong>.</p>
+<p>Então, o que considerámos hoje? Três qualidades de Jeová.</p>
 
-<p>Por isso, quando enfrentarmos uma situação difícil, podemos perguntar a nós próprios: <span class="key">“Estou apenas a pensar no meu problema, ou estou também a meditar nas qualidades de Jeová?”</span> O problema talvez não desapareça imediatamente, mas meditar em quem Jeová é pode fortalecer a nossa confiança, assim como fortaleceu a de Jeremias.</p>
-
-<div class="recap">
-  <p><strong>Jeová pode ajudar-nos.</strong></p>
-  <p><strong>Jeová quer ajudar-nos.</strong></p>
-  <p><strong>E Jeová vê tudo e sempre fará o que é certo.</strong></p>
+<div class="point">
+<p><strong>Primeiro:</strong> o seu grande poder prova que <strong>ele pode ajudar-nos.</strong></p>
+<p><strong>Segundo:</strong> o seu amor leal assegura-nos de que <strong>ele quer ajudar-nos.</strong></p>
+<p><strong>Terceiro:</strong> o seu amor pela justiça garante-nos de que <strong>ele vê e vai corrigir.</strong></p>
 </div>
+
+<p>Por isso, quando enfrentarmos uma situação difícil, podemos fazer uma pergunta: <span class="question">“Estou a meditar nas qualidades de Jeová ou estou apenas a pensar no meu problema?”</span></p>
+
+<p>Essa pergunta pode fazer uma grande diferença. Porque quanto mais meditarmos nas qualidades de Jeová, mais forte ficará a nossa fé.</p>
+
+<p>E podemos ter a mesma confiança que Jeremias tinha: <strong>Jeová pode ajudar-nos. Jeová quer ajudar-nos. E Jeová vê e vai corrigir.</strong></p>
 </section>
 
 <section class="family" id="familia">
 <h2>Sugestão para a adoração em família</h2>
 
-<p>A matéria também deixa uma boa sugestão: assistir ao vídeo <span class="key">“Comprem Um Campo em Anatote”</span> e depois conversar sobre duas perguntas: <span class="key">“Como é que a fé de Jeremias aumentou?”</span> e <span class="key">“Como é que o exemplo dele pode fortalecer a nossa fé?”</span> Assim, não ficamos apenas a conhecer as qualidades de Jeová; fazemos aquilo que Jeremias fazia — meditamos nelas e aprendemos a confiar cada vez mais nele.</p>
+<p>E esta matéria também nos deixou uma ótima sugestão para a nossa adoração em família. Podemos aproveitar e assistir ao vídeo <strong>“Comprem Um Campo em Anatote”</strong>.</p>
 
-<div class="refbox">
-  <div class="refbox-title">Vídeo e texto</div>
-  <a href="https://www.jw.org/finder?lank=pub-jwb-098_7_VIDEO&amp;wtlocale=TPO" target="_blank" rel="noopener">Vídeo ↗</a>
-  <a href="https://wol.jw.org/pt-PT/wol/bc/r296/lp-tpo/202026252/4/0" target="_blank" rel="noopener">Jeremias 32:6-8 ↗</a>
+<p>Depois do vídeo, podemos conversar sobre duas perguntas: <span class="question">“Como é que a fé de Jeremias aumentou?”</span> e <span class="question">“Como é que o exemplo dele pode fortalecer a nossa fé?”</span></p>
+
+<p>Dessa forma, não ficamos apenas a conhecer as qualidades de Jeová. Vamos fazer aquilo que Jeremias fazia: meditar nas qualidades de Jeová e confiar cada vez mais nele.</p>
+
+<div class="refs">
+<a href="https://www.jw.org/finder?lank=pub-jwb-098_7_VIDEO&amp;wtlocale=TPO" target="_blank" rel="noopener">Vídeo ↗</a>
+ ·
+<a href="https://wol.jw.org/pt-PT/wol/bc/r296/lp-tpo/202026252/4/0" target="_blank" rel="noopener">Jeremias 32:6-8 ↗</a>
 </div>
 </section>
 
 </main>
 
 <footer>
-Toque numa referência bíblica para abrir o texto no próprio discurso. “Abrir na WOL” leva à fonte oficial.
+Formato de manuscrito para leitura no púlpito. Toque numa referência para abrir o texto bíblico sem sair do discurso.
 </footer>
 
 <script>
 const root=document.documentElement;
-let size=parseInt(localStorage.getItem('ferSpeechSizeFinal')||'20',10);
+let size=parseInt(localStorage.getItem('ferManuscritoSize')||'20',10);
 function setSize(n){
   size=Math.max(16,Math.min(28,n));
   root.style.setProperty('--font',size+'px');
-  localStorage.setItem('ferSpeechSizeFinal',size);
+  localStorage.setItem('ferManuscritoSize',size);
 }
 setSize(size);
 document.getElementById('plus').onclick=()=>setSize(size+1);
 document.getElementById('minus').onclick=()=>setSize(size-1);
 document.getElementById('print').onclick=()=>window.print();
 
-function updateProgress(){
+function progress(){
   const max=document.documentElement.scrollHeight-innerHeight;
   document.getElementById('progress').style.width=(max>0?Math.min(100,scrollY/max*100):0)+'%';
 }
-addEventListener('scroll',updateProgress,{passive:true});
-addEventListener('resize',updateProgress);
-updateProgress();
+addEventListener('scroll',progress,{passive:true});
+addEventListener('resize',progress);
+progress();
 </script>
+
 </body>
 </html>
